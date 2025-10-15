@@ -22,7 +22,7 @@
       padding: 10px;
     }
 
-    .game-card {
+    .play-card {
       background: #222;
       border: 2px solid #555;
       border-radius: 10px;
@@ -32,7 +32,7 @@
       transition: 0.2s;
     }
 
-    .game-card:hover {
+    .play-card:hover {
       border-color: #0f0;
       transform: scale(1.05);
     }
@@ -59,27 +59,28 @@
   </style>
 </head>
 <body>
-  <h1>Games</h1>
+  <h1>Plays</h1>
   <div class="menu">
-    <div class="game-card" onclick="loadGame('https://unblocked-games.s3.amazonaws.com/index.html')">FreezeNova</div>
-    <div class="game-card" onclick="loadGame('https://1v1.lol/')">1v1.lol</div>
-    <div class="game-card" onclick="loadGame('https://leveldevil.vip/')">Level Devil</div>
-    <div class="game-card" onclick="loadGame('https://k12guru.nl/')">K12 GURU</div>
-    <div class="game-card" onclick="loadGame('https://faf-games.github.io')">FAF games</div>
-    <div class="game-card" onclick="loadGame('https://www.bestgames.com/')">bestgames.com</div>
-    <div class="game-card" onclick="loadGame('https://eaglercraft.com')">Eaglercraft</div>
+    <div class="play-card" onclick="loadPlay('https://unblocked-games.s3.amazonaws.com/index.html')">FreezeNova</div>
+    <div class="play-card" onclick="loadPlay('https://1v1.lol/')">1v1.lol</div>
+    <div class="play-card" onclick="loadPlay('https://leveldevil.vip/')">Level Devil</div>
+    <div class="play-card" onclick="loadPlay('https://k12guru.nl/')">K12 GURU</div>
+    <div class="play-card" onclick="loadPlay('https://faf-games.github.io')">FAF titles</div>
+    <div class="play-card" onclick="loadPlay('https://www.bestgames.com/')">best titles</div>
+    <div class="play-card" onclick="loadPlay('https://eaglercraft.com')">Eaglercraft</div>
+    <div class="play-card" onclick="loadPlay('https://sites.google.com/spsgnv.org/flap/home')">Low Quality Flappy Bird</div>
   </div>
 
   <h1>Happy Wheels coming soon!</h1>
   <h0.25>*Eaglercraft may not be functional*</h0.25>
 
   <div class="iframe-container">
-    <iframe id="gameFrame"></iframe>
+    <iframe id="playFrame"></iframe>
   </div>
 
   <script>
-    function loadGame(url) {
-      const frame = document.getElementById("gameFrame");
+    function loadPlay(url) {
+      const frame = document.getElementById("playFrame");
       frame.src = url;
       frame.style.display = "block";
       window.scrollTo({ top: frame.offsetTop, behavior: "smooth" });
